@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  background: #0e0e0e;
+}
+
+body {
+  margin: 0;
+  overscroll-behavior-y: none;
+  color: #f5f5f5;
+  font-family: "Pretendard Variable", "Pretendard", -apple-system, BlinkMacSystemFont,
+    system-ui, sans-serif;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+}
+
+.app-frame {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  min-height: 100dvh;
+  min-height: 100vh;
+  background: #0e0e0e;
+  overflow: hidden;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.5);
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.safe-top {
+  padding-top: env(safe-area-inset-top);
+}
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
